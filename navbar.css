@@ -1,0 +1,97 @@
+
+body,p{
+  margin: 0px !important;
+}
+nav{
+  width: 100%;
+  padding: 10px 0px ;
+}
+.top-nav{
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+ 
+}
+.top-nav-left{
+  width: auto;
+  text-align: center;
+  
+}
+.top-nav-right{
+  width: auto;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  
+}
+.top-nav-right select{
+  height: 50%;
+  border: 0px;
+
+}
+.middle-nav{
+  display: flex;
+  justify-content: space-around;
+  
+}
+.middle-nav > div{
+  width: auto;
+}
+.middle-nav-left img{
+ width: 40px;
+ height: 40px;
+}
+.search-div{
+  position: relative;
+}
+.search-div button{
+  position: absolute;
+  border: none;
+  height: 40px;
+  background-color: green;
+  color: white;
+}
+.search-div input{
+  border:1px solid rgb(246, 235, 235);
+  width: 300px;
+  height: 40px;
+}
+.border-div{
+  width: auto;
+  text-align: center;
+  border-right:1px solid black ;
+  
+}
+.middle-nav-right{
+  width: 500px;
+  display: flex;
+  align-items: center;
+  
+  width: 100%;
+}
+.cart-div{
+ display: grid;
+ column-gap: 10px;
+ grid-template-columns: auto auto auto;
+
+}
+.cart-div-icon{
+  margin-left:20px;
+  width: auto;
+  position: relative;
+}
+.fa-cart-shopping{
+ font-size: 30px;
+ position: relative;
+}
+.fa-cart-shopping p{
+  font-size: 10px;
+  position: absolute;
+  color: pink;
+  top:35%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  
+}
