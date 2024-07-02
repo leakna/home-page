@@ -1,6 +1,23 @@
-.top-footer,.bottom-footer{
+.top-footer,.bottom-footer,.text-model-inside-div{
   max-width: 1200px;
   margin: auto;
+}
+.text-model-fullside{
+  padding:50px 0px;
+}
+.text-model-inside-div{
+  display: grid;
+  grid-template-columns: repeat(6,auto);
+  justify-content: space-between;
+  
+}
+.text-model-p{
+  font-size: 25px;
+  text-align: center;
+  color: grey;
+}
+.text-model-green{
+  color: green;
 }
 .footer-inside-div{
   background-color: rgb(244, 242, 242);

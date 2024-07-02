@@ -60,12 +60,20 @@
 .slider-dot{
   text-align: center;
 }
-.slider-dot p{
-  font-size: 50px;
-  color: grey;
+.slider-dot p,.blog-dot{
+  font-size: 40px;
+  color: rgb(173, 170, 170);
   font-weight: 900;
+  text-align: center;
 }
-
+.blog-dot-div{
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+}
+.blog-black-dot{
+  color: black;
+}
 .item-div{
  
   max-width: 1200px;
@@ -173,8 +181,11 @@
   color: grey;
   padding: 5px;
 }
-.select,.product-img div,.slider-dot span,.newpro-text{
+.select,.product-img div,.newpro-text{
  color: white;
+}
+.slider-dot span{
+  color: green;
 }
 .select{
   background-color: green;
