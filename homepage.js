@@ -1,19 +1,6 @@
-//for cart number
-fetch('http://localhost:5000/cart')
-.then(res=>{
-  if(res){
-    return res.json()
-  }
-  else
-   throw new Error('Cannot fetch')
-})
-.then(data=>{
-  let cartNumber = document.querySelector('.cart-item-number');
-  cartNumber.textContent=data.length
-})
 
 let productDiv=document.querySelector('.group-product')
-fetch('http://localhost:5000/product')
+fetch('http://localhost:3000/product')
 .then(response=>{
   if(response){
     return response.json();
@@ -24,7 +11,7 @@ fetch('http://localhost:5000/product')
 .then((data)=>{
   let forDisplay=""
   //for cart number
-  data.forEach(element=>{
+  data.forEach((element,index)=>{
     //for create each product
     const discount=element.price*(element.discount/100)
     forDisplay+=`<div class="each-product">
@@ -45,8 +32,8 @@ fetch('http://localhost:5000/product')
                
                 
               </div>
-              <div class='product-start'>
-                
+              <div class='product-star'>
+                ${createStar(element.rating)}
               </div>
             </div>
             <div>
@@ -54,14 +41,13 @@ fetch('http://localhost:5000/product')
             </div>
             </div>
          </div>`
+ 
 
-         //any logic for discount
-        //  if(element.discount)
   })
   productDiv.innerHTML=forDisplay
   let addButton=document.querySelectorAll('.fa-bag-shopping')
   attachEventListener(addButton)
-  forHover(addButton)
+
 })
 .catch(err=>{
   console.log('Error:',err) 
@@ -71,10 +57,15 @@ function attachEventListener(addButton){
     let productPrice=document.querySelectorAll('.product-price')
     let productImg=document.querySelectorAll('.product-img img')
     let productDis=document.querySelectorAll('.product-discount-num')
+    let cartNumber = document.querySelector('.cart-item-number');//cart
     addButton.forEach(((button,index)=>{   
       console.log(button)                 
-      button.addEventListener('click',(event)=>{
-        console.log('clicked')
+      button.addEventListener('click',()=>{
+
+        //for change color and increase or decrease cart 
+        forClick(button,cartNumber)
+        
+        //for get the data from element and pass it to post(not needed)
         let name=productName[index].textContent.trim()
         let price=Number(productPrice[index].innerText.trim().slice(1))
         let img=productImg[index].src
@@ -85,44 +76,37 @@ function attachEventListener(addButton){
           img,
           discount
         }
-        
-       postToJson('http://localhost:5000/cart',obj)
+        //for post to cart(not needed)
+       //postToJson('http://localhost:3000/cart',obj)
       })
     }))
     
 }
-function postToJson(url,data){
-  fetch(url,{
-    method:'POST',
-    headers:{
-      'Content-Type':'application/json'
-    },
-    body:JSON.stringify(data),
-  })
-  .then(response=>{
-    if(response){
-      return response.json()
+
+  function forClick(button,cart){
+    let colorButton=Array.from(button.classList).find(element=>element=='delete')
+    if(colorButton){
+      button.classList.remove('delete')
+      cart.textContent=Number(cart.textContent)-1 
     }
-    else throw new Error('Something is not ok')
-  })
-  .then(result=>{
-    console.log(result)
-  })
-  .catch((err)=>{
-    console.error('Error in postToJson:', err);
-  })
+    else{
+      button.classList.add('delete')
+      cart.textContent=Number(cart.textContent)+1
+    }
+  }
+ 
+  function createStar(rate,index){
+    let star=""
+    for(let i=0;i<5;i++){
+      if(i<rate)
+        star+=`<i class="fa-solid fa-star"></i>`
+      
+      else
+       star+=`<i class="fa-regular fa-star"></i>`
+    }
+    return star
   }
   
-  function forHover(hoverElement){
-    hoverElement.forEach((element,index)=>{
-      element.addEventListener('mouseover',(event)=>{
-        element.classList.add('select')
-      })
-      element.addEventListener('mouseout',()=>{
-        element.classList.remove('select')
-      })
-    })
-  }
     
 
 

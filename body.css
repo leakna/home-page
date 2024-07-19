@@ -19,7 +19,7 @@
   max-width: 1000px;
   margin: auto;
 }
-.slider-text-small,.blog-detail{
+.slider-text-small,.blog-detail,.viewall{
   color: green;
 }
 .slider-text-big{
@@ -107,9 +107,7 @@
 .item-header-text,.blog-header h3{
   margin:30px 0px;
 }
-.viewall{
-  color: green;
-}
+
 .group-category{
   display: grid;
   grid-template-columns: repeat(6,auto);
@@ -178,6 +176,9 @@
   background-color: rgb(170, 167, 167);
   color: grey;
   padding: 5px;
+}
+.delete{
+  color: red;
 }
 .select,.product-img div,.newpro-text{
  color: white;

@@ -1,6 +1,6 @@
 {
   "cart": [
-    
+
   ],
   "product": [
     {
@@ -8,53 +8,61 @@
       "name": "Syringe",
       "price": 4.99,
       "discount": 0,
-      "img": "https://c6.ca/cdn/shop/products/TER-SS01T2516_1045cb3c-d7e2-4a46-b7ff-216096891c77_1000x.jpg?v=1637838632"
+      "img": "https://c6.ca/cdn/shop/products/TER-SS01T2516_1045cb3c-d7e2-4a46-b7ff-216096891c77_1000x.jpg?v=1637838632",
+      "rating":4
     },
     {
       "id": "5d4b",
       "name": "Sarasoft AG",
       "price": 14.99,
       "discount": 50,
-      "img": "http://127.0.0.1:5500/asset/item.png"
+      "img": "http://127.0.0.1:5500/asset/item.png",
+      "rating":3
     },
     {
       "id": "f295",
       "name": "Sarasoft AG",
       "price": 14.99,
       "discount": 50,
-      "img": "http://127.0.0.1:5500/asset/item.png"
+      "img": "http://127.0.0.1:5500/asset/item.png",
+      "rating":2
     },
     {
       "id": "b5a9",
       "name": "Sarasoft AG",
       "price": "$15.99",
-      "img": "http://127.0.0.1:5500/asset/item.png"
+      "img": "http://127.0.0.1:5500/asset/item.png",
+      "rating":5
     },
     {
       "id": "d9bf",
       "name": "Sarasoft AG",
       "price": 14.99,
       "discount": 50,
-      "img": "http://127.0.0.1:5500/asset/item.png"
+      "img": "http://127.0.0.1:5500/asset/item.png",
+      "rating":1
     },
     {
       "id": "313e",
       "name": "Sarasoft AG",
       "price": 14.99,
-      "img": "http://127.0.0.1:5500/asset/item.png"
+      "img": "http://127.0.0.1:5500/asset/item.png",
+      "rating":5
     },
     {
       "id": "49ed",
       "name": "Sarasoft AG",
       "price": 14.99,
-      "img": "http://127.0.0.1:5500/asset/item.png"
+      "img": "http://127.0.0.1:5500/asset/item.png",
+      "rating":4
     },
     {
       "id": "baca",
       "name": "Sarasoft AG",
       "price": 14.99,
       "discount": 50,
-      "img": "/asset/item.png"
+      "img": "/asset/item.png",
+      "rating":3
     }
   ]
 }
