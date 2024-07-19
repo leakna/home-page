@@ -1,8 +1,5 @@
 
-.body-div{
-  width: 100%;
- 
-}
+
 .slider{
  margin-bottom: 20px;
  
@@ -145,6 +142,7 @@
 }
 .product-img img{
   width: 250px;
+  height:300px;
 }
 .product-img div{
   position: absolute;
@@ -171,7 +169,7 @@
   justify-content: space-between;
   align-items: center;
 }
-.product-price span{
+.full-price-product{
   text-decoration: line-through;
   color: rgb(186, 185, 185);
 }

@@ -1,7 +1,7 @@
 
 body,p{
   margin: 0px !important;
-}
+}ellipse
 nav{
   width: 100%;
   padding: 10px 0px ;
@@ -14,10 +14,16 @@ nav{
 
  
 }
+.header-div{
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  background-color: white;
+}
 .top-nav-left{
   width: auto;
   text-align: center;
-  
+
 }
 .top-nav-right{
   width: auto;
